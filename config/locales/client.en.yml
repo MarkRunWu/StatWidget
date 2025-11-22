@@ -7,3 +7,13 @@ en:
   js:
     statewidget:
       placeholder: placeholder
+      activity:
+        title: "Site activity"
+        subtitle: "Past 7 days"
+        topics: "Topics"
+        posts: "Posts"
+        active_users: "Active users"
+        new_users: "New users"
+        likes: "Likes"
+        error: "We couldn't load activity right now."
+        empty: "No recent activity to show."

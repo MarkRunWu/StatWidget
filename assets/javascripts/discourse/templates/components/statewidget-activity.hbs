@@ -1,0 +1,35 @@
+{{#if this.enabled}}
+  <div class="statewidget-activity">
+    <div class="statewidget-activity__header">
+      <h3 class="statewidget-activity__title">
+        {{i18n "statewidget.activity.title"}}
+      </h3>
+      <p class="statewidget-activity__subtitle">
+        {{i18n "statewidget.activity.subtitle"}}
+      </p>
+    </div>
+
+    {{#if this.loading}}
+      <div class="statewidget-activity__status">
+        {{i18n "loading"}}
+      </div>
+    {{else if this.loadFailed}}
+      <div class="statewidget-activity__status statewidget-activity__status--error">
+        {{i18n "statewidget.activity.error"}}
+      </div>
+    {{else if this.hasData}}
+      <ul class="statewidget-activity__grid">
+        {{#each this.stats as |stat|}}
+          <li class="statewidget-activity__item">
+            <div class="statewidget-activity__value">{{stat.value}}</div>
+            <div class="statewidget-activity__label">{{stat.label}}</div>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <div class="statewidget-activity__status">
+        {{i18n "statewidget.activity.empty"}}
+      </div>
+    {{/if}}
+  </div>
+{{/if}}

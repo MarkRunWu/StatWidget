@@ -1,4 +1,4 @@
-# **Plugin Name** Plugin
+# **Statewidget** Plugin
 
 **Plugin Summary**
 
